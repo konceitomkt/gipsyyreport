@@ -417,12 +417,33 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
-      .main   { padding: 18px; }
-      .header { padding: 14px 18px; }
-      .nav    { padding: 0 18px; }
+      .main   { padding: 16px; }
+      .header { padding: 12px 16px; flex-wrap: wrap; gap: 10px; }
+      .header-brand { flex: 1; min-width: 0; }
+      .period-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 6px; }
+      .period-label { min-width: 0; flex: 1; text-align: center; font-size: 12px; }
+      .pbtn { padding: 6px 10px; font-size: 12px; }
+      .pbtn-print { display: none; }
+      .nav { padding: 0 8px; overflow-x: auto; scrollbar-width: none; }
+      .nav::-webkit-scrollbar { display: none; }
+      .ntab { padding: 12px 14px; font-size: 12px; white-space: nowrap; }
       .g2, .g3, .g21 { grid-template-columns: 1fr; }
-      .banner { flex-direction: column; align-items: flex-start; }
-      .banner-stats { gap: 20px; flex-wrap: wrap; }
+      .banner { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px; }
+      .banner-stats { gap: 16px; flex-wrap: wrap; width: 100%; }
+      .bstat { flex: 1; min-width: 80px; }
+      .kpi-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .kval { font-size: 22px; }
+      .acct-card { padding: 14px; }
+      .acct-kpi { grid-template-columns: 1fr 1fr; }
+      .card { padding: 16px; }
+      .header-title h1 { font-size: 14px; }
+      .logo img { height: 28px; }
+    }
+    @media (max-width: 480px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .acct-kpi { grid-template-columns: 1fr; }
+      .banner-stats { flex-direction: column; gap: 10px; }
+      .bstat { text-align: left; }
     }
   </style>
 </head>
