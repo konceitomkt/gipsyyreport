@@ -1238,12 +1238,12 @@ function audienceSection(aud, color) {
 // ══════════════════════════════════════════════════════════
 //  A N A L Y S I S   S E C T I O N
 // ══════════════════════════════════════════════════════════
-function renderAnalysisSection(text, label) {
+function renderAnalysisSection(text, label, title = 'Análise do Período') {
   if (!text) return '';
   return `
     <div class="card" style="margin-bottom:24px;border-left:4px solid var(--primary)">
       <div class="card-title" style="display:flex;align-items:center;gap:8px">
-        <span>📝</span> Análise de Sorteio
+        ${title}
         ${label ? `<span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:auto">${esc(label)}</span>` : ''}
       </div>
       <p style="font-size:14px;line-height:1.75;color:var(--text);margin-top:10px">${esc(text)}</p>
@@ -1277,7 +1277,7 @@ function renderDebriefPage() {
           </div>
         </div>
 
-        ${db.analysis ? renderAnalysisSection(db.analysis, db.date) : ''}
+        ${db.analysis ? renderAnalysisSection(db.analysis, db.date, 'Análise de Sorteio') : ''}
 
         <!-- Post Orgânico + Anúncio -->
         <div class="g2" style="margin-bottom:20px">
