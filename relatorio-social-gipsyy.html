@@ -906,7 +906,10 @@ function renderOverview() {
 
   const rDelta = totalR && prevTR ? ((totalR - prevTR)/prevTR*100) : (en.reachVsPrev ?? null);
   const iDelta = totalI && prevTI ? ((totalI - prevTI)/prevTI*100) : null;
-  const fDelta = totalF && prevTF ? ((totalF - prevTF)/prevTF*100) : null;
+  // fDelta: usa followersVsPrev do Instagram (mais preciso que % de total acumulado)
+  const fDelta = pen != null
+    ? (en.followersVsPrev != null ? en.followersVsPrev : ((totalF - prevTF) / (prevTF || 1) * 100))
+    : null;
 
   const dBanner = (pct) => pct != null ? `<div class="bstat-d">${da(pct)}${fmtPct(pct)}</div>` : '';
 
@@ -1592,11 +1595,10 @@ function toggleTheme() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
   document.getElementById('theme-btn').textContent = isDark ? '🌙' : '☀️';
-  // Refresh charts so colours update
+  // Refresh charts after theme change
   Object.values(charts).forEach(c => { try { c.destroy(); } catch(e){} }); charts = {};
   renderAll();
 }
-
 </script>
 </body>
 </html>
