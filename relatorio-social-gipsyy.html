@@ -738,10 +738,123 @@ const DATA = {
         peakHours: '12h – 15h'
       }
     }
-  }
+  },
 
   // Próximas quinzenas adicionadas aqui pelo Claude:
-  // "2026-06-Q2": { ... },
+
+  "2026-06-Q2": {
+    label    : "Junho 2026 · Mês Completo",
+    dateRange: "1 – 30 jun 2026",
+
+    analysis: {
+      summary: "Junho foi o mês mais forte em alcance para a Gipsyy: a @gipsyy_pt atingiu 157,6 mil contas (+56,6%) e a @gipsyy_fr consolidou o crescimento pós-sorteio com +125 seguidores líquidos (+211,9% vs. maio). O investimento em anúncios na conta PT mantém-se o principal motor de visibilidade. Para julho, recomendamos iniciar campanhas pagas também na conta FR, que ainda não tem massa crítica suficiente para crescer organicamente.",
+      en: "Junho foi o melhor mês em alcance da história da @gipsyy_pt: 157.622 contas alcançadas (+56,6%), com 807 mil impressões — praticamente todas pagas (97,1% de anúncios). As 1.665 interacções mostram uma audiência activa, com destaque para os posts (75,2% das interacções). Os 2.294 acessos ao perfil (+59,5%) confirmam interesse genuíno pela marca. O saldo de seguidores foi positivo (+196 líquidos), com 418 novos e 222 cancelamentos. O público mantém o perfil histórico: maioritariamente feminino (64,2%), com pico entre os 25–44 anos.",
+      fr: "A @gipsyy_fr registou crescimento expressivo em junho: 184 seguidores totais (+211,9% vs. maio) com líquido de +125 (143 novas entradas, 18 saídas). As 802 interacções estão concentradas em posts (87,6%), num perfil que ainda depende dos seguidores actuais (71,4% das interacções). O alcance caiu 13,1% para 486 contas, o que reforça a necessidade de anúncios para expandir a audiência além da base existente."
+    },
+
+    en: {
+      impressions        : 807011,
+      impressionsPaidPct : 97.1,
+      reach              : 157622,
+      reachVsPrev        : 56.6,
+      interactions        : 1665,
+      interactionsPaidPct : 45.0,
+      followers      : 19523,
+      followersVsPrev: 1.0,
+      followersGained: 418,
+      followersLost  : 222,
+      growth         : 196,
+      profileVisits        : 2294,
+      profileVisitsVsPrev  : 59.5,
+      linkClicks           : 193,
+      linkClicksVsPrev     : 10.9,
+      addressTaps          : 11,
+      addressTapsVsPrev    : -42.1,
+      likes    : 186,
+      comments : 316,
+      saves    : 38,
+      shares   : 71,
+      reposts  : 4,
+      viewsByFormat       : { stories: 53.4, posts: 24.8, reels: 21.8 },
+      interactionsByFormat: { posts: 75.2, stories: 14.2, reels: 10.5 },
+      audience: {
+        gender  : { female: 64.2, male: 35.8 },
+        age     : [
+          { range: '13–17', pct: 0.1  },
+          { range: '18–24', pct: 3.5  },
+          { range: '25–34', pct: 31.7 },
+          { range: '35–44', pct: 34.5 },
+          { range: '45–54', pct: 20.4 },
+          { range: '55–64', pct: 7.3  },
+          { range: '65+',   pct: 2.4  },
+        ],
+        countries: null,
+        cities: [
+          { name: 'Lisboa',  pct: 8.7 },
+          { name: 'Sintra',  pct: 5.1 },
+          { name: 'Cascais', pct: 4.4 },
+          { name: 'Porto',   pct: 3.9 },
+          { name: 'Amadora', pct: 2.6 },
+        ],
+        peakHours: null
+      }
+    },
+
+    fr: {
+      impressions        : 4956,
+      impressionsPaidPct : null,
+      reach              : 486,
+      reachVsPrev        : -13.1,
+      interactions        : 802,
+      interactionsPaidPct : null,
+      followers      : 184,
+      followersVsPrev: 211.9,
+      followersGained: 143,
+      followersLost  : 18,
+      growth         : 125,
+      profileVisits        : 302,
+      profileVisitsVsPrev  : 1676.5,
+      linkClicks           : 13,
+      linkClicksVsPrev     : 0,
+      addressTaps          : null,
+      addressTapsVsPrev    : null,
+      likes    : 178,
+      comments : 340,
+      saves    : 53,
+      shares   : 71,
+      reposts  : null,
+      viewsByFormat       : { stories: 21.2, posts: 66.4, reels: 12.4 },
+      interactionsByFormat: { posts: 87.6, stories: 11.4, reels: 1.0 },
+      audience: {
+        gender: { female: 57.2, male: 42.8 },
+        age: [
+          { range: '13–17', pct: 0.0  },
+          { range: '18–24', pct: 7.2  },
+          { range: '25–34', pct: 20.3 },
+          { range: '35–44', pct: 26.1 },
+          { range: '45–54', pct: 31.2 },
+          { range: '55–64', pct: 11.6 },
+          { range: '65+',   pct: 3.6  },
+        ],
+        countries: [
+          { name: 'Portugal', flag: '🇵🇹', pct: 59.8 },
+          { name: 'Espanha',  flag: '🇪🇸', pct: 17.4 },
+          { name: 'França',   flag: '🇫🇷', pct: 5.4  },
+          { name: 'Brasil',   flag: '🇧🇷', pct: 4.3  },
+          { name: 'Ucrânia',  flag: '🇺🇦', pct: 3.8  },
+        ],
+        cities: [
+          { name: 'Lisboa',         pct: 11.4 },
+          { name: 'Cascais',        pct: 7.1  },
+          { name: 'Kiev',           pct: 3.3  },
+          { name: 'Paterna',        pct: 3.3  },
+          { name: 'Móstoles',       pct: 2.7  },
+        ],
+        peakHours: null
+      }
+    }
+  },
+
   // "2026-07-Q1": { ... },
 
 };
@@ -1492,90 +1605,121 @@ function renderInsightsPage() {
     `).join('')}`;
 }
 
+// ═════════════════════════════════════════�//  C H A R T S
 // ══════════════════════════════════════════════════════════
-//  C H A R T S
-// ══════════════════════════════════════════════════════════
-function mkChart(id, cfg) {
-  if (charts[id]) charts[id].destroy();
-  const c = document.getElementById(id);
-  if (!c) return;
-  charts[id] = new Chart(c.getContext('2d'), cfg);
+function getColor(varName) {
+  return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
 }
 
-const chartOpts = {
-  responsive: true, maintainAspectRatio: false,
-  plugins: { legend: { position:'top', labels:{ usePointStyle:true, boxWidth:8 } } },
-  scales: {
-    y: { grid:{ color:'#E8E5FF' }, ticks:{ callback: v => fmt(v), color:'#6B6580', font:{size:11} } },
-    x: { grid:{ display:false  }, ticks:{ color:'#6B6580', font:{size:11} } }
-  }
-};
-
 function renderOverviewCharts() {
-  const labels = KEYS.map(k => DATA[k]?.label?.split('·')[0].trim() || k);
-  const enF    = KEYS.map(k => DATA[k]?.en?.followers || 0);
-  const frF    = KEYS.map(k => DATA[k]?.fr?.followers || 0);
+  const labels = KEYS.map(k => (DATA[k]?.label || k).split('·')[0].trim());
+  const enG    = KEYS.map(k => DATA[k]?.en?.growth || 0);
+  const frG    = KEYS.map(k => DATA[k]?.fr?.growth || 0);
 
-  mkChart('growthChart', {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        { label:'EN', data:enF, borderColor:'#0057B8', backgroundColor:'rgba(0,87,184,0.08)', tension:0.4, fill:true, pointBackgroundColor:'#0057B8', pointRadius:5 },
-        { label:'FR', data:frF, borderColor:'#FAB900', backgroundColor:'rgba(250,185,0,0.08)', tension:0.4, fill:true, pointBackgroundColor:'#FAB900', pointRadius:5 },
-      ]
-    },
-    options: chartOpts
-  });
+  const primary   = getColor('--primary');
+  const secondary = getColor('--secondary');
+  const text      = getColor('--text');
+  const muted     = getColor('--muted');
+  const border    = getColor('--border');
 
-  const en = cur().en || {};
-  const fr = cur().fr || {};
-  mkChart('mixChart', {
-    type: 'doughnut',
-    data: {
-      labels: ['EN Curtidas','EN Coment.','EN Saves','EN Shares','FR Curtidas','FR Coment.','FR Saves','FR Shares'],
-      datasets: [{
-        data: [en.likes||0,en.comments||0,en.saves||0,en.shares||0,fr.likes||0,fr.comments||0,fr.saves||0,fr.shares||0],
-        backgroundColor: ['#0057B8','#2E7FD9','#A89DF5','#C4BCFF','#FAB900','#FF9A6C','#FFB898','#FFD4C2'],
-        borderWidth:2, borderColor:'#fff'
-      }]
-    },
-    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ usePointStyle:true, boxWidth:8, font:{size:10} } } } }
-  });
+  // Growth chart
+  const gcEl = document.getElementById('growthChart');
+  if (gcEl) {
+    if (charts.growthChart) { try { charts.growthChart.destroy(); } catch(e){} }
+    charts.growthChart = new Chart(gcEl, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: '@gipsyy_pt', data: enG, backgroundColor: primary + 'CC', borderColor: primary, borderWidth: 1, borderRadius: 4 },
+          { label: '@gipsyy_fr', data: frG, backgroundColor: secondary + 'CC', borderColor: secondary, borderWidth: 1, borderRadius: 4 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: text, font: { size: 11 } } }, tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' + (ctx.raw >= 0 ? '+' : '') + ctx.raw } } },
+        scales: {
+          x: { ticks: { color: muted, font: { size: 10 } }, grid: { color: border + '44' } },
+          y: { ticks: { color: muted, font: { size: 10 } }, grid: { color: border + '44' } }
+        }
+      }
+    });
+  }
+
+  // Mix chart (interactions EN vs FR current period)
+  const pd  = cur();
+  const enI = pd?.en?.interactions || 0;
+  const frI = pd?.fr?.interactions || 0;
+  const mcEl = document.getElementById('mixChart');
+  if (mcEl && (enI || frI)) {
+    if (charts.mixChart) { try { charts.mixChart.destroy(); } catch(e){} }
+    charts.mixChart = new Chart(mcEl, {
+      type: 'doughnut',
+      data: {
+        labels: ['@gipsyy_pt', '@gipsyy_fr'],
+        datasets: [{ data: [enI, frI], backgroundColor: [primary + 'DD', secondary + 'DD'], borderColor: [primary, secondary], borderWidth: 2 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom', labels: { color: text, font: { size: 11 }, padding: 12 } } }
+      }
+    });
+  }
 }
 
 function renderAccountCharts(acct) {
-  const d      = cur()[acct];
-  if (!d) return;
-  const labels = KEYS.map(k => DATA[k]?.label?.split('·')[0].trim() || k);
-  const followers = KEYS.map(k => DATA[k]?.[acct]?.followers || 0);
-  const color  = acct === 'en' ? '#0057B8' : '#FAB900';
-  const colorB = acct === 'en' ? 'rgba(0,87,184,0.1)' : 'rgba(250,185,0,0.1)';
+  const primary   = getColor('--primary');
+  const secondary = getColor('--secondary');
+  const text      = getColor('--text');
+  const muted     = getColor('--muted');
+  const border    = getColor('--border');
+  const c1        = acct === 'en' ? primary : secondary;
 
-  mkChart(acct + 'HistChart', {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        label:'Seguidores', data:followers,
-        backgroundColor:colorB, borderColor:color, borderWidth:2, borderRadius:8
-      }]
-    },
-    options: chartOpts
-  });
+  const labels   = KEYS.map(k => (DATA[k]?.label || k).split('·')[0].trim());
+  const followers = KEYS.map(k => DATA[k]?.[acct]?.growth || 0);
 
-  mkChart(acct + 'MixChart', {
-    type: 'doughnut',
-    data: {
-      labels: ['Curtidas','Comentários','Salvamentos','Shares','Reposts'],
-      datasets: [{
-        data: [d.likes||0,d.comments||0,d.saves||0,d.shares||0,d.reposts||0],
-        backgroundColor: ['#0057B8','#22C55E','#F59E0B','#FAB900','#94A3B8'],
-        borderWidth:2, borderColor:'#fff'
-      }]
-    },
-    options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ usePointStyle:true, boxWidth:8, font:{size:11} } } } }
-  });
+  // Historical followers chart
+  const hEl = document.getElementById(acct + 'HistChart');
+  if (hEl) {
+    if (charts[acct + 'HistChart']) { try { charts[acct + 'HistChart'].destroy(); } catch(e){} }
+    charts[acct + 'HistChart'] = new Chart(hEl, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{ label: 'Crescimento líquido', data: followers, backgroundColor: c1 + 'CC', borderColor: c1, borderWidth: 1, borderRadius: 4 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: text, font: { size: 11 } } } },
+        scales: {
+          x: { ticks: { color: muted, font: { size: 10 } }, grid: { color: border + '44' } },
+          y: { ticks: { color: muted, font: { size: 10 } }, grid: { color: border + '44' } }
+        }
+      }
+    });
+  }
+
+  // Interaction mix chart
+  const d = cur()?.[acct] || {};
+  const mixData  = [d.likes||0, d.comments||0, d.saves||0, d.shares||0].filter((v,i,a) => a.some(x=>x>0));
+  const mixLbls  = ['Gostos', 'Comentários', 'Guardados', 'Partilhas'].slice(0, mixData.length);
+  const alphas   = ['DD','BB','99','77'];
+  const mixColors = mixLbls.map((_,i) => c1 + alphas[i]);
+  const mEl = document.getElementById(acct + 'MixChart');
+  if (mEl && mixData.some(v => v > 0)) {
+    if (charts[acct + 'MixChart']) { try { charts[acct + 'MixChart'].destroy(); } catch(e){} }
+    charts[acct + 'MixChart'] = new Chart(mEl, {
+      type: 'doughnut',
+      data: {
+        labels: mixLbls,
+        datasets: [{ data: mixData, backgroundColor: mixColors, borderWidth: 1 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom', labels: { color: text, font: { size: 11 }, padding: 10 } } }
+      }
+    });
+  }
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1593,6 +1737,7 @@ function renderAll() {
 }
 
 renderAll();
+
 // ══════════════════════════════════════════════════════════
 //  T H E M E   T O G G L E
 // ══════════════════════════════════════════════════════════
