@@ -472,7 +472,6 @@
   <div class="ntab active" onclick="switchTab('overview')" id="ntab-overview">📊 Visão Geral</div>
   <div class="ntab" onclick="switchTab('en')"             id="ntab-en">🇵🇹 Instagram EN</div>
   <div class="ntab" onclick="switchTab('fr')"             id="ntab-fr">🇫🇷 Instagram FR</div>
-  <div class="ntab debrief" onclick="switchTab('debrief')" id="ntab-debrief">📋 Debriefing</div>
 </nav>
 
 <!-- ══ CONTENT ══ -->
@@ -480,7 +479,6 @@
   <div class="tab active" id="tab-overview"></div>
   <div class="tab"        id="tab-en"></div>
   <div class="tab"        id="tab-fr"></div>
-  <div class="tab"        id="tab-debrief"></div>
 </div>
 
 <script>
@@ -1056,7 +1054,6 @@ function switchTab(id) {
   if (id === 'overview') renderOverviewCharts();
   if (id === 'en') renderAccountCharts('en');
   if (id === 'fr') renderAccountCharts('fr');
-  if (id === 'debrief') renderDebriefPage();
 }
 
 function changePeriod(dir) {
@@ -1349,9 +1346,23 @@ function formatBars(obj, color) {
 }
 
 function interactionRows(d) {
+  const hasDetail = [d.likes, d.comments, d.saves, d.shares, d.reposts].some(v => v != null);
+  if (!hasDetail) {
+    const eng = calcEng(d);
+    return `
+      <div class="srow">
+        <span class="srow-lbl">Interacções totais</span>
+        <span class="srow-val">${fmt(d.interactions)}</span>
+      </div>
+      <div class="srow">
+        <span class="srow-lbl">Taxa de engajamento</span>
+        <span class="srow-val">${eng.toFixed(2)}%</span>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Detalhe por tipo (gostos, comentários, guardados, partilhas) não disponível neste período.</p>`;
+  }
   return [
     ['Gostos',            d.likes,    null],
-    ['Comentários',       d.comments, '⚠️ inclui participações no sorteio'],
+    ['Comentários',       d.comments, null],
     ['Guardados',         d.saves,    null],
     ['Partilhas',         d.shares,   null],
     ['Republicações',     d.reposts,  null],
@@ -1804,7 +1815,6 @@ function renderAll() {
   renderOverview();
   renderAccountPage('en');
   renderAccountPage('fr');
-  renderDebriefPage();
   const activeId = document.querySelector('.tab.active')?.id?.replace('tab-','') || 'overview';
   if (activeId === 'overview') renderOverviewCharts();
   if (activeId === 'en') renderAccountCharts('en');
