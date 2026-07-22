@@ -855,7 +855,82 @@ const DATA = {
     }
   },
 
-  // "2026-07-Q1": { ... },
+  "2026-07-Q1": {
+    label    : "1ª Quinzena · Julho 2026",
+    dateRange: "1 – 15 jul 2026",
+
+    analysis: {
+      summary: "Primeira quinzena de julho com queda de alcance nas duas contas face ao pico de junho, mas o crescimento de seguidores mantém-se positivo. A @gipsyy_pt somou 82 mil contas alcançadas e +15 seguidores líquidos; a @gipsyy_fr manteve a tracção pós-sorteio com +5 seguidores líquidos (+2,7%), a maior taxa de crescimento percentual entre as duas contas neste período.",
+      en: "Na 1ª quinzena de julho, a @gipsyy_pt alcançou 82.004 contas, uma queda face ao pico de 157,6 mil de junho, com 386.933 visualizações e 370 interacções. O saldo de seguidores manteve-se positivo (+15), elevando o total para 19.555 (+0,1%). Os Stories dominam as visualizações por formato (48,9%), à frente de Reels (28,3%) e Posts (22,8%). O conteúdo que mais captou seguidores novos foi a promoção de 25% OFF (código TRIP25) e o sorteio de bilhetes.",
+      fr: "A @gipsyy_fr fechou a 1ª quinzena de julho com 189 seguidores totais, um crescimento de +2,7% (+5 líquidos) — a maior taxa de crescimento percentual da conta desde o início do acompanhamento. O alcance recuou para 180 contas e as interacções totalizaram 114. Posts continuam a liderar as visualizações por formato (44,5%), à frente de Reels (29,7%) e Stories (25,8%). O sorteio de bilhetes segue como o conteúdo que mais capta seguidores novos."
+    },
+
+    en: {
+      impressions        : 386933,
+      impressionsPaidPct : null,
+      reach              : 82004,
+      interactions        : 370,
+      interactionsPaidPct : null,
+      followers      : 19555,
+      followersVsPrev: 0.1,
+      followersGained: null,
+      followersLost  : null,
+      growth         : 15,
+      profileVisits        : null,
+      profileVisitsVsPrev  : null,
+      linkClicks           : null,
+      linkClicksVsPrev     : null,
+      addressTaps          : null,
+      addressTapsVsPrev    : null,
+      likes    : null,
+      comments : null,
+      saves    : null,
+      shares   : null,
+      reposts  : null,
+      viewsByFormat       : { stories: 48.9, reels: 28.3, posts: 22.8 },
+      interactionsByFormat: null,
+      audience: {
+        gender  : { female: 64.2, male: 35.8 },
+        age     : null,
+        countries: null,
+        cities: null,
+        peakHours: null
+      }
+    },
+
+    fr: {
+      impressions        : 2502,
+      impressionsPaidPct : null,
+      reach              : 180,
+      interactions        : 114,
+      interactionsPaidPct : null,
+      followers      : 189,
+      followersVsPrev: 2.7,
+      followersGained: null,
+      followersLost  : null,
+      growth         : 5,
+      profileVisits        : null,
+      profileVisitsVsPrev  : null,
+      linkClicks           : null,
+      linkClicksVsPrev     : null,
+      addressTaps          : null,
+      addressTapsVsPrev    : null,
+      likes    : null,
+      comments : null,
+      saves    : null,
+      shares   : null,
+      reposts  : null,
+      viewsByFormat       : { posts: 44.5, reels: 29.7, stories: 25.8 },
+      interactionsByFormat: null,
+      audience: {
+        gender: { female: 55.8, male: 44.2 },
+        age: null,
+        countries: null,
+        cities: null,
+        peakHours: null
+      }
+    }
+  },
 
 };
 
@@ -1187,12 +1262,12 @@ function renderAccountPage(acct) {
       <div class="kcard">
         <div class="klbl">Visualizações</div>
         <div class="kval">${fmt(d.impressions)}</div>
-        <span class="kdelta neutral">${d.impressionsPaidPct}% de anúncios</span>
+        ${d.impressionsPaidPct!=null ? `<span class="kdelta neutral">${d.impressionsPaidPct}% de anúncios</span>` : ''}
       </div>
       <div class="kcard">
         <div class="klbl">Interacções</div>
         <div class="kval">${fmt(d.interactions)}</div>
-        ${iDlt!=null ? `<span class="kdelta ${dc(iDlt)}">${da(iDlt)}${fmtPct(iDlt)} vs. quinzena anterior</span>` : `<span class="kdelta neutral">${d.interactionsPaidPct}% de anúncios</span>`}
+        ${iDlt!=null ? `<span class="kdelta ${dc(iDlt)}">${da(iDlt)}${fmtPct(iDlt)} vs. quinzena anterior</span>` : (d.interactionsPaidPct!=null ? `<span class="kdelta neutral">${d.interactionsPaidPct}% de anúncios</span>` : '')}
       </div>
       <div class="kcard">
         <div class="klbl">Eng. Rate</div>
