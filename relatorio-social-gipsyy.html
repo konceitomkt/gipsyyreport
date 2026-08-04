@@ -472,6 +472,7 @@
   <div class="ntab active" onclick="switchTab('overview')" id="ntab-overview">📊 Visão Geral</div>
   <div class="ntab" onclick="switchTab('en')"             id="ntab-en">🇵🇹 Instagram EN</div>
   <div class="ntab" onclick="switchTab('fr')"             id="ntab-fr">🇫🇷 Instagram FR</div>
+  <div class="ntab debrief" onclick="switchTab('debrief')" id="ntab-debrief">📋 Debriefing</div>
 </nav>
 
 <!-- ══ CONTENT ══ -->
@@ -479,6 +480,7 @@
   <div class="tab active" id="tab-overview"></div>
   <div class="tab"        id="tab-en"></div>
   <div class="tab"        id="tab-fr"></div>
+  <div class="tab"        id="tab-debrief"></div>
 </div>
 
 <script>
@@ -930,6 +932,91 @@ const DATA = {
     }
   },
 
+  "2026-07-Q2": {
+    label    : "2ª Quinzena · Julho 2026",
+    dateRange: "16 – 31 jul 2026",
+
+    analysis: {
+      summary: "Segunda quinzena de julho marcada pelo sorteio Barcelona↔Paris em colaboração entre as duas contas. A @gipsyy_pt somou 388,3 mil visualizações e +51 seguidores líquidos, enquanto a @gipsyy_fr acelerou o crescimento (+11,7% em seguidores) puxada pela participação no sorteio. Reels segue como formato mais visualizado nas duas contas.",
+      en: "Na 2ª quinzena de julho, a @gipsyy_pt registou 388.346 visualizações e 85.753 contas alcançadas, com 709 interacções. O saldo de seguidores foi positivo (+51), elevando o total para 19.605 (+0,3%). Reels lideram as visualizações por formato (53,7%), à frente de Stories (34,6%) e Posts (11,7%). O conteúdo que mais captou seguidores novos foi a promoção de 25% OFF (código TRIP25), com o sorteio Barcelona↔Paris também a contribuir para o alcance do período.",
+      fr: "A @gipsyy_fr fechou a 2ª quinzena de julho com 210 seguidores totais, um crescimento de +11,7% (+22 líquidos) — o melhor resultado percentual da conta desde junho. O alcance somou 704 contas (+291% vs. período anterior) e as interacções totalizaram 306. Reels lideram as visualizações por formato (45,6%), à frente de Stories (31,2%) e Posts (23,2%). O sorteio Barcelona↔Paris, em colaboração com a @gipsyy_pt, foi o principal motor do crescimento no período."
+    },
+
+    en: {
+      impressions        : 388346,
+      impressionsPaidPct : null,
+      reach              : 85753,
+      reachVsPrev        : 4.6,
+      interactions        : 709,
+      interactionsPaidPct : null,
+      followers      : 19605,
+      followersVsPrev: 0.3,
+      followersGained: null,
+      followersLost  : null,
+      growth         : 51,
+      profileVisits        : 707,
+      profileVisitsVsPrev  : null,
+      linkClicks           : 97,
+      linkClicksVsPrev     : null,
+      addressTaps          : 4,
+      addressTapsVsPrev    : null,
+      likes    : null,
+      comments : null,
+      saves    : null,
+      shares   : null,
+      reposts  : null,
+      viewsByFormat       : { reels: 53.7, stories: 34.6, posts: 11.7 },
+      interactionsByFormat: null,
+      audience: {
+        gender  : { female: 64.2, male: 35.8 },
+        age     : null,
+        countries: null,
+        cities: null,
+        peakHours: null
+      }
+    },
+
+    fr: {
+      impressions        : 2875,
+      impressionsPaidPct : null,
+      reach              : 704,
+      reachVsPrev        : 291.1,
+      interactions        : 306,
+      interactionsPaidPct : null,
+      followers      : 210,
+      followersVsPrev: 11.7,
+      followersGained: null,
+      followersLost  : null,
+      growth         : 22,
+      profileVisits        : 113,
+      profileVisitsVsPrev  : null,
+      linkClicks           : 1,
+      linkClicksVsPrev     : null,
+      addressTaps          : 0,
+      addressTapsVsPrev    : null,
+      likes    : null,
+      comments : null,
+      saves    : null,
+      shares   : null,
+      reposts  : null,
+      viewsByFormat       : { reels: 45.6, stories: 31.2, posts: 23.2 },
+      interactionsByFormat: null,
+      audience: {
+        gender: { female: 57.8, male: 42.2 },
+        age: null,
+        countries: [
+          { name: 'Portugal', flag: '🇵🇹', pct: 56.7 },
+          { name: 'Espanha',  flag: '🇪🇸', pct: 15.7 },
+          { name: 'França',   flag: '🇫🇷', pct: 7.6  },
+          { name: 'Ucrânia',  flag: '🇺🇦', pct: 7.1  },
+          { name: 'Brasil',   flag: '🇧🇷', pct: 4.8  },
+        ],
+        cities: null,
+        peakHours: null
+      }
+    }
+  },
+
 };
 
 // ══════════════════════════════════════════════════════════
@@ -937,59 +1024,28 @@ const DATA = {
 // ══════════════════════════════════════════════════════════
 const DEBRIEFS = [
   {
-    id     : "giveaway-jun-2026",
-    title  : "Sorteio · 2 Bilhetes Lisboa ↔ Nice",
-    date   : "2 jun 2026",
+    id     : "giveaway-jul-2026",
+    title  : "Sorteio · 2 Bilhetes Barcelona ↔ Paris",
+    date   : "31 jul 2026",
     account: "@gipsyy_pt & @gipsyy_fr",
-    winner : "Léonardo",
-    prize  : "2 bilhetes ida e volta · nova rota Lisboa ↔ Nice",
+    winner : null,
+    prize  : "2 bilhetes ida e volta · nova rota Barcelona ↔ Paris",
 
-    // Post orgânico
+    // Post orgânico (sem anúncio de apoio nesta campanha)
     post: {
-      impressions  : 63244,
-      reach        : 32145,
-      interactions : 875,
-      comments     : 496,
-      likes        : 276,
-      saves        : 53,
+      impressions  : 2661,
+      reach        : 1048,
+      interactions : 390,
+      comments     : 242,
+      likes        : 82,
+      saves        : 19,
       shares       : 46,
-      newFollowers : 134,
-      profileVisits: 66,
-      linkClicks   : 2,
+      newFollowers : 12,
+      profileVisits: 75,
+      linkClicks   : 13,
     },
 
-    // Anúncio de apoio
-    ad: {
-      impressions      : 53946,
-      reach            : 30926,
-      goal             : "750 visitas ao perfil",
-      goalAchieved     : 710,
-      newFollowers     : 99,
-      profileVisits    : 710,
-      likes            : 105,
-      comments         : 30,
-      saves            : 13,
-      shares           : 12,
-      spend            : 131.19,
-      dailyBudget      : 10.00,
-      costPerVisit     : 0.17,
-      status           : "Pausado",
-      audienceGender   : { female: 50.6, male: 44.8 },
-      audienceAge      : [
-        { range: '18–24', pct: 17 }, { range: '25–34', pct: 38 },
-        { range: '35–44', pct: 22 }, { range: '45–54', pct: 12 },
-        { range: '55–64', pct: 5  }, { range: '65+',   pct: 2  },
-      ],
-      audienceLocations: [
-        { name: 'Distrito de Lisboa',   pct: 30 },
-        { name: 'Distrito do Porto',    pct: 21 },
-        { name: 'Distrito de Setúbal',  pct: 13 },
-        { name: 'Comunidad de Madrid',  pct: 8  },
-        { name: 'Île-de-France',        pct: 6  },
-      ]
-    },
-
-    analysis: "O sorteio de bilhetes para a nova rota Lisboa↔Nice foi a acção de maior impacto da quinzena. Combinando o post orgânico com o anúncio, a campanha gerou mais de 117 mil visualizações e alcançou 63 mil contas únicas. Os 496 comentários reflectem a adesão da comunidade: muitas pessoas marcaram amigos e partilharam o post. O anúncio de €131 trouxe 710 visitas ao perfil (meta: 750) a um custo de €0,17 por visita — um resultado eficiente. No total, a campanha adicionou 233 novos seguidores entre post orgânico e anúncio, a um custo médio de €0,56 por novo seguidor. O público mais envolvido foi 25–34 anos (38%) nos distritos de Lisboa (30%) e Porto (21%). ⚠️ Nota estratégica: apoiar o crescimento do perfil em sorteios de forma recorrente não é sustentável a longo prazo — o seguidor captado por prémio tende a abandonar a conta assim que o incentivo desaparece. A recomendação é investir em anúncios com objectivo de awareness e alcance, que constroem audiência qualificada e com interesse genuíno na marca."
+    analysis: "O sorteio de bilhetes para a nova rota Barcelona↔Paris, em colaboração com a @gipsyy_fr, foi 100% orgânico — sem apoio de anúncio pago, diferente da campanha de junho. Ainda assim gerou 2.661 visualizações e alcançou 1.048 contas, com 242 comentários (bem acima do volume orgânico típico), 82 gostos e 46 partilhas. O post trouxe 75 visitas ao perfil, 13 toques no link da bio e 12 novos seguidores directos — resultado sólido sem qualquer investimento em anúncios. O público mais envolvido foi 25–34 anos (42,2%), maioritariamente mulheres (54,4%) e de Portugal (70,5%)."
   }
 ];
 
@@ -1054,6 +1110,7 @@ function switchTab(id) {
   if (id === 'overview') renderOverviewCharts();
   if (id === 'en') renderAccountCharts('en');
   if (id === 'fr') renderAccountCharts('fr');
+  if (id === 'debrief') renderDebriefPage();
 }
 
 function changePeriod(dir) {
@@ -1132,6 +1189,8 @@ function renderOverview() {
       </div>
     </div>
 
+    ${renderAnalysisSection(pd.analysis?.summary, pd.label)}
+
     <div class="g2">
       ${accountSummaryCard('en', en, pen)}
       ${accountSummaryCard('fr', fr, pfr)}
@@ -1149,8 +1208,6 @@ function renderOverview() {
         <div class="chart-wrap"><canvas id="mixChart"></canvas></div>
       </div>
     </div>
-
-    ${renderAnalysisSection(pd.analysis?.summary, pd.label)}
   `;
 }
 
@@ -1273,20 +1330,15 @@ function renderAccountPage(acct) {
       </div>
     </div>
 
+    <!-- Análise do período -->
+    ${renderAnalysisSection(pd.analysis?.[acct], pd.label)}
+
     <!-- Distribuição por formato -->
     <div class="card" style="margin-bottom:20px">
       <div class="card-title">Distribuição por Formato de Conteúdo</div>
-      <div class="card-sub">Visualizações vs. Interacções — como cada formato performa</div>
-      <div class="g2" style="margin-bottom:0; gap:32px">
-        <div>
-          <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">% de Visualizações</div>
-          ${formatBars(d.viewsByFormat, c1)}
-        </div>
-        <div>
-          <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">% de Interacções</div>
-          ${formatBars(d.interactionsByFormat, c2)}
-        </div>
-      </div>
+      <div class="card-sub">Visualizações — como cada formato performa</div>
+      <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">% de Visualizações</div>
+      ${formatBars(d.viewsByFormat, c1)}
     </div>
 
     <!-- Interacções detalhe + Actividade perfil -->
@@ -1303,25 +1355,12 @@ function renderAccountPage(acct) {
       </div>
     </div>
 
-    <!-- Audiência -->
-    ${d.audience ? audienceSection(d.audience, c1) : ''}
-
-    <!-- Charts -->
-    <div class="g21">
-      <div class="card">
-        <div class="card-title">Crescimento Histórico de Seguidores</div>
-        <div class="card-sub">Por quinzena</div>
-        <div class="chart-wrap"><canvas id="${acct}HistChart"></canvas></div>
-      </div>
-      <div class="card">
-        <div class="card-title">Mix de Interacções</div>
-        <div class="card-sub">Likes · Coment. · Saves · Shares</div>
-        <div class="chart-wrap"><canvas id="${acct}MixChart"></canvas></div>
-      </div>
+    <!-- Chart -->
+    <div class="card" style="margin-bottom:24px">
+      <div class="card-title">Crescimento Histórico de Seguidores</div>
+      <div class="card-sub">Por quinzena</div>
+      <div class="chart-wrap"><canvas id="${acct}HistChart"></canvas></div>
     </div>
-
-    <!-- Análise do período -->
-    ${renderAnalysisSection(pd.analysis?.[acct], pd.label)}
   `;
 }
 
@@ -1508,7 +1547,7 @@ function renderDebriefPage() {
         ${db.analysis ? renderAnalysisSection(db.analysis, db.date, 'Análise de Sorteio') : ''}
 
         <!-- Post Orgânico + Anúncio -->
-        <div class="g2" style="margin-bottom:20px">
+        <div class="${db.ad ? 'g2' : ''}" style="margin-bottom:20px">
           <div>
             <div class="card-title" style="margin-bottom:12px">📸 Post Orgânico</div>
             <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
@@ -1525,6 +1564,7 @@ function renderDebriefPage() {
               ].map(([l,v]) => `<div class="kcard" style="padding:12px"><div class="klbl" style="font-size:10px">${l}</div><div class="kval" style="font-size:18px">${fmt(v)}</div></div>`).join('')}
             </div>
           </div>
+          ${db.ad ? `
           <div>
             <div class="card-title" style="margin-bottom:12px">📣 Anúncio de Apoio</div>
             <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
@@ -1543,11 +1583,15 @@ function renderDebriefPage() {
               <span style="font-weight:700">Status:</span> ${esc(db.ad.status)} ·
               <span style="font-weight:700">Orçamento diário:</span> €${db.ad.dailyBudget}
             </div>
-          </div>
+          </div>` : `
+          <div>
+            <div class="card-title" style="margin-bottom:12px">📣 Anúncio de Apoio</div>
+            <div style="padding:14px 16px;background:var(--bg);border-radius:8px;font-size:13px;color:var(--muted)">Campanha 100% orgânica — sem anúncio pago associado.</div>
+          </div>`}
         </div>
 
         <!-- Audiência do Anúncio -->
-        ${db.ad.audienceAge || db.ad.audienceLocations ? `
+        ${db.ad && (db.ad.audienceAge || db.ad.audienceLocations) ? `
         <div class="card-title" style="margin-bottom:12px">Audiência do Anúncio</div>
         <div class="g2">
           <div>
@@ -1785,27 +1829,6 @@ function renderAccountCharts(acct) {
     });
   }
 
-  // Interaction mix chart
-  const d = cur()?.[acct] || {};
-  const mixData  = [d.likes||0, d.comments||0, d.saves||0, d.shares||0].filter((v,i,a) => a.some(x=>x>0));
-  const mixLbls  = ['Gostos', 'Comentários', 'Guardados', 'Partilhas'].slice(0, mixData.length);
-  const alphas   = ['DD','BB','99','77'];
-  const mixColors = mixLbls.map((_,i) => c1 + alphas[i]);
-  const mEl = document.getElementById(acct + 'MixChart');
-  if (mEl && mixData.some(v => v > 0)) {
-    if (charts[acct + 'MixChart']) { try { charts[acct + 'MixChart'].destroy(); } catch(e){} }
-    charts[acct + 'MixChart'] = new Chart(mEl, {
-      type: 'doughnut',
-      data: {
-        labels: mixLbls,
-        datasets: [{ data: mixData, backgroundColor: mixColors, borderWidth: 1 }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom', labels: { color: text, font: { size: 11 }, padding: 10 } } }
-      }
-    });
-  }
 }
 
 // ══════════════════════════════════════════════════════════
@@ -1815,6 +1838,7 @@ function renderAll() {
   renderOverview();
   renderAccountPage('en');
   renderAccountPage('fr');
+  renderDebriefPage();
   const activeId = document.querySelector('.tab.active')?.id?.replace('tab-','') || 'overview';
   if (activeId === 'overview') renderOverviewCharts();
   if (activeId === 'en') renderAccountCharts('en');
