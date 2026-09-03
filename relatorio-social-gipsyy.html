@@ -108,7 +108,6 @@
     }
     .ntab:hover { color: var(--primary); }
     .ntab.active { color: var(--primary); border-bottom-color: var(--primary); }
-    .ntab.debrief.active { color: #D97706; border-bottom-color: #D97706; }
 
     /* ─── MAIN ─── */
     .main {
@@ -472,7 +471,6 @@
   <div class="ntab active" onclick="switchTab('overview')" id="ntab-overview">📊 Visão Geral</div>
   <div class="ntab" onclick="switchTab('en')"             id="ntab-en">🇵🇹 Instagram EN</div>
   <div class="ntab" onclick="switchTab('fr')"             id="ntab-fr">🇫🇷 Instagram FR</div>
-  <div class="ntab debrief" onclick="switchTab('debrief')" id="ntab-debrief">📋 Debriefing</div>
 </nav>
 
 <!-- ══ CONTENT ══ -->
@@ -480,7 +478,6 @@
   <div class="tab active" id="tab-overview"></div>
   <div class="tab"        id="tab-en"></div>
   <div class="tab"        id="tab-fr"></div>
-  <div class="tab"        id="tab-debrief"></div>
 </div>
 
 <script>
@@ -1162,34 +1159,6 @@ const DATA = {
 };
 
 // ══════════════════════════════════════════════════════════
-//  D E B R I E F S   —  Campanhas especiais
-// ══════════════════════════════════════════════════════════
-const DEBRIEFS = [
-  {
-    id     : "giveaway-jul-2026",
-    title  : "Sorteio · 2 Bilhetes Barcelona ↔ Paris",
-    date   : "31 jul 2026",
-    account: "@gipsyy_pt & @gipsyy_fr",
-    winner : null,
-    prize  : "2 bilhetes ida e volta · nova rota Barcelona ↔ Paris",
-
-    // Post orgânico (sem anúncio de apoio nesta campanha)
-    post: {
-      impressions  : 2661,
-      reach        : 1048,
-      interactions : 390,
-      comments     : 242,
-      likes        : 82,
-      saves        : 19,
-      shares       : 46,
-      newFollowers : 12,
-      profileVisits: 75,
-      linkClicks   : 13,
-    },
-
-    analysis: "O sorteio de bilhetes para a nova rota Barcelona↔Paris, em colaboração com a @gipsyy_fr, foi 100% orgânico — sem apoio de anúncio pago, diferente da campanha de junho. Ainda assim gerou 2.661 visualizações e alcançou 1.048 contas, com 242 comentários (bem acima do volume orgânico típico), 82 gostos e 46 partilhas. O post trouxe 75 visitas ao perfil, 13 toques no link da bio e 12 novos seguidores directos — resultado sólido sem qualquer investimento em anúncios. O público mais envolvido foi 25–34 anos (42,2%), maioritariamente mulheres (54,4%) e de Portugal (70,5%)."
-  }
-];
 
 // ══════════════════════════════════════════════════════════
 //  S T A T E
@@ -1252,7 +1221,6 @@ function switchTab(id) {
   if (id === 'overview') renderOverviewCharts();
   if (id === 'en') renderAccountCharts('en');
   if (id === 'fr') renderAccountCharts('fr');
-  if (id === 'debrief') renderDebriefPage();
 }
 
 function changePeriod(dir) {
@@ -1660,101 +1628,6 @@ function renderAnalysisSection(text, label, title = 'Análise do Período') {
 }
 
 // ══════════════════════════════════════════════════════════
-//  D E B R I E F   P A G E
-// ══════════════════════════════════════════════════════════
-function renderDebriefPage() {
-  const el = document.getElementById('tab-debrief');
-  if (!DEBRIEFS.length) {
-    el.innerHTML = `<div class="empty" style="padding:80px 0"><div class="empty-icon">📋</div><h3>Sem debriefings ainda</h3><p>Envie os dados de uma campanha e adicionamos aqui.</p></div>`;
-    return;
-  }
-
-  function debriefCard(db) {
-    const pBar = (items, color) => (items||[]).map(i => `
-      <div class="bar-item">
-        <div class="bar-row"><span class="bar-lbl">${esc(i.name||i.range)}</span><span class="bar-val">${i.pct}%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:${Math.min(i.pct*2,100)}%;background:${color}"></div></div>
-      </div>`).join('');
-
-    return `
-      <div class="card" style="margin-bottom:28px">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
-          <div>
-            <div style="font-size:18px;font-weight:800">${esc(db.title)}</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:4px">${esc(db.account)} · ${esc(db.date)}</div>
-            ${db.winner ? `<div style="margin-top:8px;padding:6px 12px;background:var(--primary-bg);border-radius:6px;font-size:12px;display:inline-block">Vencedor: <strong>${esc(db.winner)}</strong> · ${esc(db.prize)}</div>` : ''}
-          </div>
-        </div>
-
-        ${db.analysis ? renderAnalysisSection(db.analysis, db.date, 'Análise de Sorteio') : ''}
-
-        <!-- Post Orgânico + Anúncio -->
-        <div class="${db.ad ? 'g2' : ''}" style="margin-bottom:20px">
-          <div>
-            <div class="card-title" style="margin-bottom:12px">📸 Post Orgânico</div>
-            <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
-              ${[
-                ['Visualizações', db.post.impressions],
-                ['Alcance',       db.post.reach],
-                ['Interacções',    db.post.interactions],
-                ['Gostos',        db.post.likes],
-                ['Comentários',   db.post.comments],
-                ['Guardados',     db.post.saves],
-                ['Partilhas',     db.post.shares],
-                ['➕ Novos seguid.', db.post.newFollowers],
-                ['👤 Visitas perfil',db.post.profileVisits],
-              ].map(([l,v]) => `<div class="kcard" style="padding:12px"><div class="klbl" style="font-size:10px">${l}</div><div class="kval" style="font-size:18px">${fmt(v)}</div></div>`).join('')}
-            </div>
-          </div>
-          ${db.ad ? `
-          <div>
-            <div class="card-title" style="margin-bottom:12px">📣 Anúncio de Apoio</div>
-            <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
-              ${[
-                ['Visualizações', db.ad.impressions],
-                ['Alcance',       db.ad.reach],
-                ['👤 Visitas perfil',db.ad.profileVisits],
-                ['➕ Novos seguid.', db.ad.newFollowers],
-                ['💶 Gasto',         '€' + db.ad.spend],
-                ['💰 Custo/visita',  '€' + db.ad.costPerVisit],
-              ].map(([l,v]) => `<div class="kcard" style="padding:12px"><div class="klbl" style="font-size:10px">${l}</div><div class="kval" style="font-size:18px">${typeof v==='string'?v:fmt(v)}</div></div>`).join('')}
-            </div>
-            <div style="margin-top:12px;padding:10px 14px;background:var(--bg);border-radius:8px;font-size:12px">
-              <span style="font-weight:700">Meta:</span> ${esc(db.ad.goal)} ·
-              <span style="font-weight:700">Alcançado:</span> ${fmt(db.ad.goalAchieved)} ·
-              <span style="font-weight:700">Status:</span> ${esc(db.ad.status)} ·
-              <span style="font-weight:700">Orçamento diário:</span> €${db.ad.dailyBudget}
-            </div>
-          </div>` : `
-          <div>
-            <div class="card-title" style="margin-bottom:12px">📣 Anúncio de Apoio</div>
-            <div style="padding:14px 16px;background:var(--bg);border-radius:8px;font-size:13px;color:var(--muted)">Campanha 100% orgânica — sem anúncio pago associado.</div>
-          </div>`}
-        </div>
-
-        <!-- Audiência do Anúncio -->
-        ${db.ad && (db.ad.audienceAge || db.ad.audienceLocations) ? `
-        <div class="card-title" style="margin-bottom:12px">Audiência do Anúncio</div>
-        <div class="g2">
-          <div>
-            <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase">Faixa Etária</div>
-            ${pBar(db.ad.audienceAge, 'var(--primary)')}
-          </div>
-          <div>
-            <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase">Principais Localizações</div>
-            ${pBar(db.ad.audienceLocations, 'var(--secondary)')}
-          </div>
-        </div>` : ''}
-      </div>`;
-  }
-
-  el.innerHTML = `
-    <div style="margin-bottom:22px">
-      <h2 style="font-size:19px;font-weight:800">📋 Debriefing de Campanhas</h2>
-      <p style="font-size:12px;color:var(--muted);margin-top:4px">Relatório detalhado de acções especiais e sorteios</p>
-    </div>
-    ${DEBRIEFS.map(debriefCard).join('')}`;
-}
 
 // ══════════════════════════════════════════════════════════
 //  (REMOVED) I N S I G H T S — substituído por análise integrada
@@ -1980,7 +1853,6 @@ function renderAll() {
   renderOverview();
   renderAccountPage('en');
   renderAccountPage('fr');
-  renderDebriefPage();
   const activeId = document.querySelector('.tab.active')?.id?.replace('tab-','') || 'overview';
   if (activeId === 'overview') renderOverviewCharts();
   if (activeId === 'en') renderAccountCharts('en');
