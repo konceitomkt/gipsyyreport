@@ -184,7 +184,7 @@
       font-weight: 600;
     }
     .kdelta.up     { color: var(--success); }
-    .kdelta.down   { color: var(--danger);  }
+    .kdelta.down   { color: var(--text);  }
     .kdelta.neutral { color: var(--muted);  }
 
     /* ─── SECTION TITLE ─── */
@@ -1546,7 +1546,7 @@ function renderAccountPage(acct) {
       </div>
       <div class="kcard">
         <div class="klbl">Crescimento Líquido</div>
-        <div class="kval" style="font-size:24px; color:${d.growth>=0?'var(--success)':'var(--danger)'}">${d.growth>0?'+':''}${fmt(d.growth)}</div>
+        <div class="kval" style="font-size:24px; color:${d.growth>=0?'var(--success)':'var(--text)'}">${d.growth>0?'+':''}${fmt(d.growth)}</div>
         <span class="kdelta neutral">${fmt(d.followersGained)} novos · ${fmt(d.followersLost)} cancelamentos · ${churn}% abandono</span>
       </div>
       <div class="kcard">
