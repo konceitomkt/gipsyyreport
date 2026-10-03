@@ -1013,7 +1013,6 @@ const DATA = {
       }
     }
   },
-
   "2026-08-Q1": {
     label    : "Agosto 2026 · 1ª Quinzena",
     dateRange: "1 – 15 ago 2026",
@@ -1090,6 +1089,7 @@ const DATA = {
     }
   },
 
+
   "2026-08-Q2": {
     label    : "Agosto 2026 · 2ª Quinzena",
     dateRange: "16 – 31 ago 2026",
@@ -1156,6 +1156,7 @@ const DATA = {
     }
   },
 
+
   "2026-09-Q1": {
     label    : "Setembro 2026 · 1ª Quinzena",
     dateRange: "1 – 15 set 2026",
@@ -1197,13 +1198,95 @@ const DATA = {
       interactionsByFormat: { reels: 8.3, stories: 8.3, posts: 83.3 },
       audience: {
         gender: { female: 56.7, male: 43.3 },
-        age: null,
+        age: [
+          { range: '13-17', pct: 0 },   { range: '18-24', pct: 5.5 },
+          { range: '25-34', pct: null }, { range: '35-44', pct: null },
+          { range: '45-54', pct: null }, { range: '55-64', pct: null },
+          { range: '65+',   pct: null }
+        ],
         countries: null,
         cities: null
       }
     }
-  }
+  },
 
+  "2026-09-Q2": {
+    label    : "Setembro 2026 · 2ª Quinzena",
+    dateRange: "19 set – 2 out 2026",
+    analysis: {
+      summary: "A segunda quinzena de setembro manteve a tendência de queda de alcance na @gipsyy_pt, com 227.196 visualizações e 28.120 visualizadores únicos (-44,7% face à quinzena anterior), embora os seguidores continuem a crescer e os cliques no link da bio tenham subido ligeiramente. A @gipsyy_fr mais do que duplicou o alcance (247 visualizadores, +126,6%), mas perdeu 2 seguidores líquidos, fechando com 217.",
+      en: "A @gipsyy_pt registou 227.196 visualizações e 28.120 visualizadores únicos, uma quebra de 44,7% no alcance — 86,7% das visualizações vieram de não seguidores. A conta ganhou +19 seguidores líquidos, totalizando 19.838. As visitas ao perfil recuaram para 423 (-11,3%), mas os cliques no link da bio subiram para 38 (+8,6%). As interações caíram para 179. No conteúdo orgânico, os Reels lideraram tanto em visualizações (54,6%) como em interações (81,0%). O público mantém-se estável: 64,0% feminino, concentrado nos 25–44 anos (65,8%) e 73,0% em Portugal.",
+      fr: "A @gipsyy_fr registou 745 visualizações e 247 visualizadores únicos — o alcance mais do que duplicou (+126,6%) apesar de menos visualizações totais, com 52,5% vindas de não seguidores. A conta perdeu 2 seguidores líquidos, fechando com 217 (-0,9%). As Stories lideraram as visualizações (48,5%), seguidas dos Reels (33,2%). Houve apenas 10 interações, 8 delas em Posts, 8 visitas ao perfil e nenhum clique no link da bio. A audiência continua maioritariamente em Portugal (58,3%), com França a representar apenas 7,3%."
+    },
+    en: {
+      impressions: 227196, impressionsPaidPct: null,
+      reach: 28120, reachVsPrev: -44.7,
+      interactions: 179, interactionsPaidPct: null,
+      followers: 19838, followersVsPrev: 0.1,
+      followersGained: null, followersLost: null, growth: 19,
+      profileVisits: 423, profileVisitsVsPrev: -11.3,
+      linkClicks: 38, linkClicksVsPrev: 8.6,
+      addressTaps: 0, addressTapsVsPrev: -100.0,
+      likes: null, comments: null, saves: null, shares: null, reposts: null,
+      viewsByFormat: { reels: 54.6, stories: 39.5, posts: 5.9 },
+      interactionsByFormat: { reels: 81.0, stories: 4.8, posts: 14.3 },
+      audience: {
+        gender: { female: 64.0, male: 36.0 },
+        age: [
+          { range: '13-17', pct: 0.1 },
+          { range: '18-24', pct: 3.2 },
+          { range: '25-34', pct: 30.9 },
+          { range: '35-44', pct: 34.9 },
+          { range: '45-54', pct: 20.9 },
+          { range: '55-64', pct: 7.5 },
+          { range: '65+',   pct: 2.6 }
+        ],
+        countries: [
+          { name: 'Portugal', pct: 73.0 },
+          { name: 'Brasil',   pct: 14.5 },
+          { name: 'Espanha',  pct: 5.3 },
+          { name: 'França',   pct: 1.2 },
+          { name: 'Bélgica',  pct: 0.6 }
+        ],
+        cities: null,
+        peakHours: '15h – 18h (BRT)'
+      }
+    },
+    fr: {
+      impressions: 745, impressionsPaidPct: null,
+      reach: 247, reachVsPrev: 126.6,
+      interactions: 10, interactionsPaidPct: null,
+      followers: 217, followersVsPrev: -0.9,
+      followersGained: null, followersLost: null, growth: -2,
+      profileVisits: 8, profileVisitsVsPrev: -42.9,
+      linkClicks: 0, linkClicksVsPrev: null,
+      addressTaps: 0, addressTapsVsPrev: null,
+      likes: null, comments: null, saves: null, shares: null, reposts: null,
+      viewsByFormat: { reels: 33.2, stories: 48.5, posts: 18.4 },
+      interactionsByFormat: { reels: 20.0, stories: 0.0, posts: 80.0 },
+      audience: {
+        gender: { female: 57.3, male: 42.7 },
+        age: [
+          { range: '13-17', pct: 0 },
+          { range: '18-24', pct: 5.5 },
+          { range: '25-34', pct: 18.9 },
+          { range: '35-44', pct: 28.7 },
+          { range: '45-54', pct: 32.9 },
+          { range: '55-64', pct: 9.8 },
+          { range: '65+',   pct: 4.3 }
+        ],
+        countries: [
+          { name: 'Portugal', pct: 58.3 },
+          { name: 'Espanha',  pct: 15.6 },
+          { name: 'França',   pct: 7.3 },
+          { name: 'Ucrânia',  pct: 6.9 },
+          { name: 'Brasil',   pct: 5.5 }
+        ],
+        cities: null,
+        peakHours: '9h – 12h e 15h – 18h (BRT)'
+      }
+    }
+  }
 };
 
 // ══════════════════════════════════════════════════════════
