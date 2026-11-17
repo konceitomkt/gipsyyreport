@@ -471,6 +471,7 @@
   <div class="ntab active" onclick="switchTab('overview')" id="ntab-overview">📊 Visão Geral</div>
   <div class="ntab" onclick="switchTab('en')"             id="ntab-en">🇵🇹 Instagram EN</div>
   <div class="ntab" onclick="switchTab('fr')"             id="ntab-fr">🇫🇷 Instagram FR</div>
+  <div class="ntab" onclick="switchTab('push')"           id="ntab-push">📲 Push App</div>
 </nav>
 
 <!-- ══ CONTENT ══ -->
@@ -478,6 +479,7 @@
   <div class="tab active" id="tab-overview"></div>
   <div class="tab"        id="tab-en"></div>
   <div class="tab"        id="tab-fr"></div>
+  <div class="tab"        id="tab-push"></div>
 </div>
 
 <script>
@@ -1366,80 +1368,80 @@ const DATA = {
     }
   },
 
-  "2026-10-Q2": {
-    label    : "Outubro 2026 · 2ª Quinzena",
-    dateRange: "15 – 31 out 2026",
+  "2026-11-Q1": {
+    label    : "Novembro 2026 · 1ª Quinzena",
+    dateRange: "3 – 16 nov 2026",
     analysis: {
-      summary: "Na segunda quinzena de outubro, a @gipsyy_pt continuou a crescer em alcance: 304.719 visualizações (+18,2%) e 44.765 visualizadores únicos (+9,5%), embora as interações tenham recuado para 211 (-20,1%) e a conta tenha fechado com saldo de -15 seguidores. A @gipsyy_fr teve uma quinzena mais fraca, com 1.136 visualizações (-10,8%) e 111 visualizadores (-46,6%), terminando com 216 seguidores.",
-      en: "A @gipsyy_pt registou 304.719 visualizações (+18,2%) e 44.765 visualizadores únicos (+9,5%), mantendo a recuperação de alcance da quinzena anterior. As interações desceram para 211 (-20,1%) e o saldo de seguidores foi de -15, fechando em 19.823. A atividade no perfil subiu: 445 visitas ao perfil (+9,1%) e 39 cliques no link da bio (+5,4%), além de 2 toques no endereço comercial. No conteúdo orgânico, os Reels lideraram as visualizações (44,1%) e as interações (47,3%), com as Stories a ganhar peso nas visualizações (35,6%) e os Posts a concentrar 40,0% das interações. O público mantém-se estável: 64,0% feminino, 65,4% entre os 25 e os 44 anos e 72,8% em Portugal. Os seguidores estão mais ativos aos domingos, entre as 15h e as 21h.",
-      fr: "A @gipsyy_fr registou 1.136 visualizações (-10,8%) e 111 visualizadores únicos (-46,6%), uma quinzena de menor alcance. A conta perdeu 1 seguidor e fechou com 216. As visitas ao perfil subiram ligeiramente para 14, mas não houve cliques no link da bio (contra 3 na quinzena anterior). As Stories reforçaram o peso como principal formato em visualizações (65,0%), seguidas dos Reels (23,6%) e dos Posts (11,4%). Foram apenas 3 interações, 2 em Posts e 1 em Reels. A audiência continua maioritariamente em Portugal (56,9%), com Espanha a 15,7% e França a 7,9%."
+      summary: "Na primeira quinzena de novembro a @gipsyy_pt voltou a ganhar alcance (46.259 visualizadores únicos, +13,2%), mas fechou com saldo negativo de seguidores (-27). A @gipsyy_fr perdeu alcance (83 visualizadores, -60,1%) e manteve-se nos 215 seguidores. As comparações são feitas com a quinzena de 4 a 17 de outubro, a última registada neste relatório.",
+      en: "A @gipsyy_pt registou 284.953 visualizações e 46.259 visualizadores únicos, +13,2% de alcance face à quinzena de 4 a 17 de outubro. A conta fechou com saldo negativo de seguidores: entraram 87 e saíram 114 (-27), ficando com 19.796. As visitas ao perfil mantiveram-se estáveis (411) e os cliques no link da bio subiram para 43 (+16,2%). Os Reels concentraram 58,0% das visualizações orgânicas e 119 das 136 interações registadas por formato. O público mantém o perfil habitual: 64,0% feminino, 65,2% entre os 25 e os 44 anos e 72,8% em Portugal.",
+      fr: "A @gipsyy_fr registou 890 visualizações e 83 visualizadores únicos, uma queda de 60,1% no alcance face à quinzena de 4 a 17 de outubro. O saldo de seguidores ficou em zero (2 entradas e 2 saídas), com 215 seguidores no total. As Stories continuam a ser o principal formato (53,6% das visualizações), seguidas dos Reels (33,8%). A audiência continua maioritariamente em Portugal (56,9%), com França a representar 7,9%."
     },
     en: {
-      impressions: 304719, impressionsPaidPct: null,
-      reach: 44765, reachVsPrev: 9.5,
-      interactions: 211, interactionsPaidPct: null,
-      followers: 19823, followersVsPrev: -0.1,
-      followersGained: null, followersLost: null, growth: -15,
-      profileVisits: 445, profileVisitsVsPrev: 9.1,
-      linkClicks: 39, linkClicksVsPrev: 5.4,
-      addressTaps: 2, addressTapsVsPrev: -33.3,
+      impressions: 284953, impressionsPaidPct: null,
+      reach: 46259, reachVsPrev: 13.2,
+      interactions: null, interactionsPaidPct: null,
+      followers: 19796, followersVsPrev: -0.3,
+      followersGained: 87, followersLost: 114, growth: -27,
+      profileVisits: 411, profileVisitsVsPrev: 0.7,
+      linkClicks: 43, linkClicksVsPrev: 16.2,
+      addressTaps: 3, addressTapsVsPrev: 0.0,
       likes: null, comments: null, saves: null, shares: null, reposts: null,
-      viewsByFormat: { reels: 44.1, stories: 35.6, posts: 20.3 },
-      interactionsByFormat: { reels: 47.3, stories: 12.7, posts: 40.0 },
+      viewsByFormat: { reels: 58.0, stories: 21.7, posts: 20.3 },
+      interactionsByFormat: { reels: 87.5, stories: 0.0, posts: 12.5 },
       audience: {
         gender: { female: 64.0, male: 36.0 },
         age: [
           { range: '13-17', pct: 0.1 },
           { range: '18-24', pct: 3.1 },
-          { range: '25-34', pct: 30.4 },
+          { range: '25-34', pct: 30.2 },
           { range: '35-44', pct: 35.0 },
-          { range: '45-54', pct: 21.1 },
+          { range: '45-54', pct: 21.2 },
           { range: '55-64', pct: 7.7 },
           { range: '65+',   pct: 2.6 }
         ],
         countries: [
           { name: 'Portugal', pct: 72.8 },
-          { name: 'Brasil',   pct: 14.4 },
+          { name: 'Brasil',   pct: 14.3 },
           { name: 'Espanha',  pct: 5.5 },
           { name: 'França',   pct: 1.3 },
           { name: 'Bélgica',  pct: 0.6 }
         ],
         cities: null,
-        peakHours: 'Domingos 15h – 21h · Segundas 15h – 18h (horário de Brasília)'
+        peakHours: '15h – 21h (horário de Brasília)'
       }
     },
     fr: {
-      impressions: 1136, impressionsPaidPct: null,
-      reach: 111, reachVsPrev: -46.6,
-      interactions: 3, interactionsPaidPct: null,
-      followers: 216, followersVsPrev: -0.5,
-      followersGained: null, followersLost: null, growth: -1,
-      profileVisits: 14, profileVisitsVsPrev: 7.7,
-      linkClicks: 0, linkClicksVsPrev: -100.0,
-      addressTaps: 0, addressTapsVsPrev: null,
+      impressions: 890, impressionsPaidPct: null,
+      reach: 83, reachVsPrev: -60.1,
+      interactions: null, interactionsPaidPct: null,
+      followers: 215, followersVsPrev: -0.9,
+      followersGained: 2, followersLost: 2, growth: 0,
+      profileVisits: null, profileVisitsVsPrev: null,
+      linkClicks: null, linkClicksVsPrev: null,
+      addressTaps: null, addressTapsVsPrev: null,
       likes: null, comments: null, saves: null, shares: null, reposts: null,
-      viewsByFormat: { reels: 23.6, stories: 65.0, posts: 11.4 },
-      interactionsByFormat: { reels: 33.3, stories: 0.0, posts: 66.7 },
+      viewsByFormat: { reels: 33.8, stories: 53.6, posts: 12.6 },
+      interactionsByFormat: null,
       audience: {
         gender: { female: 57.9, male: 42.1 },
         age: [
           { range: '13-17', pct: 0 },
           { range: '18-24', pct: 5.5 },
           { range: '25-34', pct: 17.7 },
-          { range: '35-44', pct: 29.3 },
-          { range: '45-54', pct: 32.9 },
+          { range: '35-44', pct: 28.7 },
+          { range: '45-54', pct: 33.5 },
           { range: '55-64', pct: 10.4 },
           { range: '65+',   pct: 4.3 }
         ],
         countries: [
           { name: 'Portugal', pct: 56.9 },
-          { name: 'Espanha',  pct: 15.7 },
+          { name: 'Espanha',  pct: 16.7 },
           { name: 'França',   pct: 7.9 },
           { name: 'Ucrânia',  pct: 6.9 },
-          { name: 'Brasil',   pct: 5.6 }
+          { name: 'Brasil',   pct: 4.6 }
         ],
         cities: null,
-        peakHours: 'Domingos e segundas 18h – 21h · Quartas 15h – 18h (horário de Brasília)'
+        peakHours: '18h – 21h (horário de Brasília)'
       }
     }
   }
@@ -1494,6 +1496,7 @@ function esc(s) {
 
 function calcEng(d) {
   if (!d || !d.followers) return 0;
+  if (d.interactions == null) return null;
   return ((d.interactions || 0) / d.followers) * 100;
 }
 
@@ -1508,6 +1511,7 @@ function switchTab(id) {
   if (id === 'overview') renderOverviewCharts();
   if (id === 'en') renderAccountCharts('en');
   if (id === 'fr') renderAccountCharts('fr');
+  if (id === 'push') renderPushCharts();
 }
 
 function changePeriod(dir) {
@@ -1536,7 +1540,7 @@ function renderOverview() {
 
   const totalF  = (en.followers    || 0) + (fr.followers    || 0);
   const totalR  = (en.reach        || 0) + (fr.reach        || 0);
-  const totalI  = (en.interactions || 0) + (fr.interactions || 0);
+  const totalI  = (en.interactions == null && fr.interactions == null) ? null : (en.interactions || 0) + (fr.interactions || 0);
   const totalG  = (en.growth       || 0) + (fr.growth       || 0);
 
   const prevTF = (pen?.followers    || 0) + (pfr?.followers    || 0);
@@ -1653,7 +1657,7 @@ function accountSummaryCard(acct, d, prevD) {
         ${m('Alcance',     d.reach,     rDlt)}
         <div class="acct-metric">
           <div class="klbl">Eng. Rate</div>
-          <div class="kval">${eng.toFixed(2)}%</div>
+          <div class="kval">${eng==null?'—':eng.toFixed(2)+'%'}</div>
           <span class="kdelta neutral">interacções ÷ seguidores</span>
         </div>
       </div>
@@ -1687,7 +1691,7 @@ function renderAccountPage(acct) {
   const churn  = d.followersGained ? Math.round((d.followersLost/d.followersGained)*100) : 0;
   const fDlt   = d.followersVsPrev ?? (prevD ? ((d.followers-prevD.followers)/prevD.followers*100) : null);
   const rDlt   = d.reachVsPrev     ?? (prevD ? ((d.reach-prevD.reach)/prevD.reach*100) : null);
-  const iDlt   = prevD ? ((d.interactions-prevD.interactions)/prevD.interactions*100) : null;
+  const iDlt   = (prevD && d.interactions != null && prevD.interactions) ? ((d.interactions-prevD.interactions)/prevD.interactions*100) : null;
 
   const acctHandle = isEn ? '@gipsyy_pt' : '@gipsyy_fr';
   el.innerHTML = `
@@ -1722,7 +1726,7 @@ function renderAccountPage(acct) {
       </div>
       <div class="kcard">
         <div class="klbl">Eng. Rate</div>
-        <div class="kval">${eng.toFixed(2)}%</div>
+        <div class="kval">${eng==null?'—':eng.toFixed(2)+'%'}</div>
         <span class="kdelta neutral">interacções ÷ seguidores</span>
       </div>
     </div>
@@ -1792,7 +1796,7 @@ function interactionRows(d) {
       </div>
       <div class="srow">
         <span class="srow-lbl">Taxa de engajamento</span>
-        <span class="srow-val">${eng.toFixed(2)}%</span>
+        <span class="srow-val">${eng==null?'—':eng.toFixed(2)+'%'}</span>
       </div>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Detalhe por tipo (gostos, comentários, guardados, partilhas) não disponível neste período.</p>`;
   }
@@ -2083,6 +2087,9 @@ function renderOverviewCharts() {
   const enI = pd?.en?.interactions || 0;
   const frI = pd?.fr?.interactions || 0;
   const mcEl = document.getElementById('mixChart');
+  if (mcEl && !(enI || frI)) {
+    mcEl.parentElement.innerHTML = '<p style="color:var(--muted);font-size:13px;padding-top:60px;text-align:center">Total de interações não disponível neste período.</p>';
+  }
   if (mcEl && (enI || frI)) {
     if (charts.mixChart) { try { charts.mixChart.destroy(); } catch(e){} }
     charts.mixChart = new Chart(mcEl, {
@@ -2136,14 +2143,195 @@ function renderAccountCharts(acct) {
 // ══════════════════════════════════════════════════════════
 //  R E N D E R   A L L
 // ══════════════════════════════════════════════════════════
+//  P U S H   N O T I F I C A T I O N S  (ano até à data · GA4)
+// ══════════════════════════════════════════════════════════
+const PUSH = {
+  period: '1 jan – 17 nov 2026',
+  source: 'Google Analytics 4 · evento notification_open e coortes de aquisição',
+  opens: 14965,
+  opensPerUser: 1.39,
+  monthly: [
+    { m:'Jan', opens:1404, days:31 }, { m:'Fev', opens:1474, days:28 },
+    { m:'Mar', opens:1737, days:31 }, { m:'Abr', opens:1494, days:30 },
+    { m:'Mai', opens:1517, days:31 }, { m:'Jun', opens:1229, days:30 },
+    { m:'Jul', opens:1527, days:31 }, { m:'Ago', opens:1448, days:31 },
+    { m:'Set', opens:1321, days:30 }, { m:'Out', opens:1257, days:31 },
+    { m:'Nov*', opens:558, days:17 }
+  ],
+  revenue: { push: 5363.66, total: 224250.00, pushPct: 2.39,
+             tx: 159, txTotal: 6062, txPct: 2.62,
+             users: 33, ltv120: 162.54, ltv120Avg: 29.69 },
+  channels: [
+    { name:'Direto',                   users:5824, rev:129716.40, revPct:57.84, tx:3472, ltv:22.27 },
+    { name:'Pesquisa orgânica',        users:350,  rev:39913.09,  revPct:17.80, tx:1202, ltv:114.04 },
+    { name:'Cross-network',            users:1000, rev:27470.84,  revPct:12.25, tx:684,  ltv:27.47 },
+    { name:'Pesquisa paga',            users:318,  rev:20844.85,  revPct:9.30,  tx:519,  ltv:65.55 },
+    { name:'Push notifications',       users:33,   rev:5363.66,   revPct:2.39,  tx:159,  ltv:162.54, hl:true },
+    { name:'Não atribuído',            users:18,   rev:822.67,    revPct:0.37,  tx:22,   ltv:45.70 },
+    { name:'Social pago',              users:6,    rev:118.49,    revPct:0.05,  tx:4,    ltv:19.75 },
+    { name:'Email · Assistente de IA', users:4,    rev:0,         revPct:0,     tx:0,    ltv:0 }
+  ],
+  countries: [
+    { name:'Portugal', pct:56.3 }, { name:'Espanha', pct:21.9 }, { name:'França', pct:9.0 },
+    { name:'Brasil', pct:2.3 }, { name:'Outros (100+ países)', pct:10.6 }
+  ],
+  gender: { female: 54.9, male: 45.1 },
+  analysis: "Entre 1 de janeiro e 17 de novembro, as notificações push da app Gipsyy foram abertas 14.965 vezes, cerca de 1.400 por mês. Os utilizadores cuja primeira visita veio de um push geraram € 5.363,66 em receita (2,39% do total da app) e 159 transações (2,62%). São apenas 33 utilizadores, mas com o maior valor médio de todos os canais: € 162,54 em 120 dias, 5,5 vezes a média da app (€ 29,69), e quase 5 compras por utilizador. O volume de aberturas tem vindo a descer desde o pico de março (1.737): outubro (1.257) ficou entre os meses mais baixos do ano, só acima de junho (1.229), e novembro segue num ritmo ainda menor (33 aberturas por dia, contra 41 em outubro)."
+};
+
+function eur(n) {
+  return '€ ' + Number(n).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function nbr(n) { return Number(n).toLocaleString('pt-BR'); }
+
+function renderPushPage() {
+  const el = document.getElementById('tab-push');
+  if (!el) return;
+  const P = PUSH, R = P.revenue;
+  const ratio = (R.ltv120 / R.ltv120Avg).toFixed(1).replace('.', ',');
+  const maxRev = Math.max(...P.channels.map(c => c.rev));
+
+  const monthRows = P.monthly.map(x => `
+    <div class="srow">
+      <span class="srow-lbl">${x.m}</span>
+      <div class="srow-r">
+        <span class="srow-val">${nbr(x.opens)}</span>
+        <span class="srow-d neutral" style="color:var(--muted)">${(x.opens/x.days).toFixed(0)}/dia</span>
+      </div>
+    </div>`).join('');
+
+  const chRows = P.channels.map(c => `
+    <tr style="${c.hl ? 'background:var(--primary-bg);font-weight:800' : ''}">
+      <td style="padding:8px 10px">${esc(c.name)}</td>
+      <td style="padding:8px 10px;text-align:right">${c.rev ? eur(c.rev) : '—'}</td>
+      <td style="padding:8px 10px;width:28%">
+        <div class="bar-track"><div class="bar-fill" style="width:${(c.rev/maxRev*100).toFixed(1)}%;background:${c.hl ? 'var(--secondary)' : 'var(--primary)'}"></div></div>
+      </td>
+      <td style="padding:8px 10px;text-align:right">${c.revPct.toFixed(2).replace('.', ',')}%</td>
+      <td style="padding:8px 10px;text-align:right">${nbr(c.tx)}</td>
+      <td style="padding:8px 10px;text-align:right">${c.ltv ? eur(c.ltv) : '—'}</td>
+    </tr>`).join('');
+
+  const ctyBars = P.countries.map(c => `
+    <div class="bar-item">
+      <div class="bar-row"><span class="bar-lbl">${esc(c.name)}</span><span class="bar-val">${c.pct.toFixed(1).replace('.', ',')}%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.min(c.pct*1.6,100)}%;background:var(--primary)"></div></div>
+    </div>`).join('');
+
+  el.innerHTML = `
+    <div class="stitle">📲 Push Notifications · App Gipsyy — ${P.period} <span class="sbadge">ano até à data</span></div>
+    <p style="font-size:11px;color:var(--muted);margin:-6px 0 16px">${esc(P.source)}. Esta secção não muda com o seletor de quinzena.</p>
+
+    <div class="kpi-grid">
+      <div class="kcard">
+        <div class="klbl">Aberturas de push</div>
+        <div class="kval">${nbr(P.opens)}</div>
+        <span class="kdelta neutral">≈ 1,4 mil por mês · ${P.opensPerUser.toFixed(2).replace('.', ',')} por utilizador</span>
+      </div>
+      <div class="kcard">
+        <div class="klbl">Receita via push</div>
+        <div class="kval" style="font-size:24px">${eur(R.push)}</div>
+        <span class="kdelta neutral">${R.pushPct.toFixed(2).replace('.', ',')}% da receita da app (${eur(R.total)})</span>
+      </div>
+      <div class="kcard">
+        <div class="klbl">Transações via push</div>
+        <div class="kval">${fmt(R.tx)}</div>
+        <span class="kdelta neutral">${R.txPct.toFixed(2).replace('.', ',')}% das ${nbr(R.txTotal)} transações</span>
+      </div>
+      <div class="kcard">
+        <div class="klbl">Valor médio por utilizador</div>
+        <div class="kval" style="font-size:24px">${eur(R.ltv120)}</div>
+        <span class="kdelta up">${ratio}× a média da app (${eur(R.ltv120Avg)}) · 120 dias</span>
+      </div>
+    </div>
+
+    ${renderAnalysisSection(P.analysis, P.period, 'Análise · Push Notifications')}
+
+    <div class="g21">
+      <div class="card">
+        <div class="card-title">Aberturas de push por mês</div>
+        <div class="card-sub">Estimativa a partir dos dados semanais do GA4: as semanas que atravessam dois meses foram divididas pelos dias. *Novembro até dia 17.</div>
+        <div class="chart-wrap" style="height:460px"><canvas id="pushMonthChart"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Mês a mês</div>
+        <div class="card-sub">Aberturas e média por dia</div>
+        ${monthRows}
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px">
+      <div class="card-title">Receita por canal de aquisição</div>
+      <div class="card-sub">Canal da primeira visita do utilizador · ${P.period}</div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:560px">
+          <thead><tr style="color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.5px;text-align:right">
+            <th style="padding:6px 10px;text-align:left">Canal</th><th style="padding:6px 10px">Receita</th><th></th>
+            <th style="padding:6px 10px">% receita</th><th style="padding:6px 10px">Transações</th><th style="padding:6px 10px">Valor médio 120 dias</th>
+          </tr></thead>
+          <tbody>${chRows}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-title">Aberturas por país</div>
+        <div class="card-sub">% das aberturas no período</div>
+        ${ctyBars}
+      </div>
+      <div class="card">
+        <div class="card-title">Como ler estes números</div>
+        <div class="card-sub">Limites dos dados exportados</div>
+        <div style="font-size:12px;line-height:1.6">
+          <p style="margin-bottom:10px"><strong>Receita:</strong> conta as compras dos utilizadores cuja <em>primeira</em> visita veio de um push. Compras de quem já usava a app e voltou por um push não entram aqui, por isso o impacto real do push é maior do que 2,39%.</p>
+          <p style="margin-bottom:10px"><strong>Mês a mês:</strong> as aberturas foram estimadas por mês a partir dos dados semanais. A receita via push só está disponível para o ano inteiro; para separar por mês é preciso exportar cada mês do GA4.</p>
+          <p style="margin-bottom:10px"><strong>Mensagens:</strong> 99% das aberturas aparecem com apenas dois nomes ("segunda varejão! 🚌" e sem nome), o que impede comparar campanhas. Dar um nome único a cada envio no Firebase resolve isto.</p>
+          <p><strong>Público:</strong> ${P.gender.female.toFixed(1).replace('.', ',')}% mulheres e ${P.gender.male.toFixed(1).replace('.', ',')}% homens, entre as aberturas com género identificado.</p>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderPushCharts() {
+  const el = document.getElementById('pushMonthChart');
+  if (!el) return;
+  const primary = getColor('--primary'), secondary = getColor('--secondary');
+  const text = getColor('--text'), muted = getColor('--muted'), border = getColor('--border');
+  if (charts.pushMonthChart) { try { charts.pushMonthChart.destroy(); } catch(e){} }
+  charts.pushMonthChart = new Chart(el, {
+    type: 'bar',
+    data: {
+      labels: PUSH.monthly.map(x => x.m),
+      datasets: [{ label: 'Aberturas de push', data: PUSH.monthly.map(x => x.opens),
+        backgroundColor: PUSH.monthly.map((x,i) => (i === PUSH.monthly.length-1 ? secondary : primary) + 'CC'),
+        borderColor: PUSH.monthly.map((x,i) => i === PUSH.monthly.length-1 ? secondary : primary),
+        borderWidth: 1, borderRadius: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.raw.toLocaleString('pt-BR') + ' aberturas' } } },
+      scales: {
+        x: { ticks: { color: muted, font: { size: 10 } }, grid: { display: false } },
+        y: { beginAtZero: true, ticks: { color: muted, font: { size: 10 } }, grid: { color: border + '44' } }
+      }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════════════════
 function renderAll() {
   renderOverview();
   renderAccountPage('en');
   renderAccountPage('fr');
+  renderPushPage();
   const activeId = document.querySelector('.tab.active')?.id?.replace('tab-','') || 'overview';
   if (activeId === 'overview') renderOverviewCharts();
   if (activeId === 'en') renderAccountCharts('en');
   if (activeId === 'fr') renderAccountCharts('fr');
+  if (activeId === 'push') renderPushCharts();
 }
 
 renderAll();
@@ -2161,4 +2349,4 @@ function toggleTheme() {
 </script>
 </body>
 </html>
-<!-- atualizado em 03/11/2026 -->
+<!-- atualizado em 17/11/2026 -->
